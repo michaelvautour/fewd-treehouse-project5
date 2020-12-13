@@ -3,9 +3,19 @@
 ======================================== */
 
 .container {
-  
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 100px minmax(200px, 1fr) 100px;
+  grid-gap: 10px;
 }
 
+header {
+   grid-column-start: 1;
+   grid-column-end: 3;
+}
 
-
-
+footer {
+   grid-column-start: 1;
+   grid-column-end: 3;
+}
