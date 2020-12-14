@@ -1,9 +1,8 @@
 const answer = prompt("Which plant is closest to the sun?");
-const actanswer = "MERCURY";
 
-if (answer.toUpperCase() === actanswer) {
-    console.log("You are right, it is: " + actanswer)
+if (answer.toUpperCase() === "MERCURY") {
+    console.log("You are right, it is: " + answer.toUpperCase())
 }
 else {
-    console.log("You are wrong, it was: " + actanswer)
+    console.log("Good try, but the planet is actually Mercury!")
 }
