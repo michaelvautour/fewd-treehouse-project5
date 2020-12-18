@@ -1,6 +1,13 @@
+let correctGuess = false;
+const number = 6;
+const guess = prompt("Guess a number between 1-10?");
 
-if () {
-  console.log('The condition is true.');
+if ( +guess === number ) {
+  correctGuess = true;
+}
+
+if (correctGuess === true) {
+  console.log('You guessed the number.');
 } else {
-  console.log('The condition is false.');
+  console.log(`Sorry. You guessed ${guess} but the answer was ${number}.`);
 }
