@@ -1,5 +1,4 @@
 window.addEventListener('load', function() {
-    console.log('Am I online?');
     baguetteBox.run('.gallery');
   });
 
