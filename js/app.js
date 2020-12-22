@@ -34,29 +34,20 @@ const img_alt = [
   "Bluebells"
 ]
 
-function createGallery(arr) {
+// Creates a random border color around images (festive look!)
+function rgbColor() {
+  return Math.floor(Math.random() * 256);
+}
+
+function createGallery() {
   let items = '';
-  for (let i = 0; i < arr.length; i++) {
+  for (let i = 0; i < d_caption_gallery.length; i++) {
     items += `
       <a href="images/${i+1}.jpg" data-caption="${d_caption_gallery[i]}"</a>
-      <img src="images/thumbnails/${i+1}.jpg" alt="${img_alt[i]}">
+      <img src="images/thumbnails/${i+1}.jpg" alt="${img_alt[i]}" style="border: 5px dotted rgb(${rgbColor()}, ${rgbColor()}, ${rgbColor()})">
     `;
   }
   return document.querySelector('div').innerHTML = items;
 }
 
-createGallery(d_caption_gallery);
-
-
-// EXTRA if I can update inside the img tags...
-// let html = '';
-
-// function rgbColor() {
-//     return Math.floor(Math.random() * 256);
-// }
-
-// for ( let i = 1; i <=10; i++) {
-//     html += `style="border: 5px dotted rgb(${rgbColor()})"`
-// }
-
-// document.getElementById('brdr').innerHTML = html;
+createGallery();
